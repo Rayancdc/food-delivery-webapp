@@ -1,0 +1,24 @@
+<h1> This is manager land </h1>
+
+<p><<a href="/meals/list">List all meals</a> Not Implemented
+<p><<a href="/meals/create">Add a meal</a> Not Implemented
+<p><<a href="/meals/delete">Delete a meal</a> Not Implemented
+<p><<a href="/customers/list">List all customers</a> Not Implemented
+<p><<a href="/customers/create">Add a customer</a> Not Implemented
+<p><<a href="/customers/delete">Delete a customer</a> Not Implemented
+<p><<a href="/orders/list-undelivered">List all undelivered orders</a> Not Implemented
+<p><<a href="/orders/create">Add an order for a customer</a> Not Implemented
+<p><<a href="/">Logoff</a>
+
+
+  def manager_action(action)
+    case action
+    when 1 then @meals_controller.list
+    when 2 then @meals_controller.add
+    when 3 then @meals_controller.delete
+    when 4 then @customers_controller.list
+    when 5 then @customers_controller.add
+    when 6 then @customers_controller.delete
+    when 7 then @orders_controller.list_undelivered_orders
+    when 8 then @orders_controller.add
+    when 9 then log_off
